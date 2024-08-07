@@ -1,4 +1,4 @@
-const API_KEY = "S8ZQHBOI1JWG3YMQ";
+const API_KEY = "API_KEY_HERE";
 document.addEventListener("DOMContentLoaded", function () {
   const symbol = document.getElementById("symbol").textContent;
   async function getData() {
