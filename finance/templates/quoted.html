@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}
+    Quoted
+{% endblock %}
+{% block main %}
+    <p><h3>A share of <span id="symbol">{{symbol.symbol}}</span> costs {{symbol.price | usd}}</h3> </p>
+    <hr>
+    <h2>Chart</h2>
+    <div class="mx-auto" width="500">
+        <canvas id="chart"></canvas>
+    </div>
+{% endblock %}

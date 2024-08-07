@@ -1,0 +1,68 @@
+nav .navbar-brand {
+  font-size: xx-large;
+}
+nav .nav-item {
+  font-size: 20px;
+}
+nav .nav-item :hover {
+  text-decoration: underline;
+  bottom: -2px;
+  transition: width 0.5s ease;
+}
+@media (min-width: 900px){
+  .navigation{
+    margin-left: 400px;
+  }
+  .nav-custom{
+    margin-right: 30px;
+  }
+  .login-form{
+    border: 2px solid black;
+    width: 500px;
+    height: 310px;
+    margin-left: 375px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+  .login-form:hover{
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px 7px rgb(250, 150, 104);
+    transition: 0.3s ease;
+  }
+}
+.heading {
+  font-size: 50px;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn{
+  width: 125px;
+}
+.btn:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgb(250, 150, 104);
+  transition: 0.3s ease;
+}
+.card{
+  border: 2px solid black;
+  width: 400px;
+  margin: 10px;
+  margin-bottom: 40px;
+}
+.card:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 5px 5px rgb(250, 150, 104);
+  transition: 0.3s ease;
+}
+.card-title{
+  font-size: x-large;
+  font-weight: 700;
+  padding: 10px;
+  margin: 20px;
+}
+.card-title span i {
+  color: rgb(236, 69, 39);
+}

@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block main
+%}
+
+
+<div class="mb-3">
+    <h2 class="heading">Your Holdings</h2>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-start">Symbol</th>
+      <th class="text-end">Shares</th>
+      <th class="text-end">Price</th>
+      <th class="text-end">TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for symbol in symbols %}
+    <tr>
+      <td class="text-start">{{symbol.symbol}}</td>
+      <td class="text-end">{{symbol.ttl_shares}}</td>
+      <td class="text-end">{{symbol.price | usd}}</td>
+      <td class="text-end">{{symbol.ttl_amt | usd}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+      <td class="border-0 text-end">{{cash | usd}}</td>
+    </tr>
+    <tr>
+      <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+      <td class="border-0 w-bold text-end">{{total | usd}}</td>
+    </tr>
+  </tfoot>
+</table>
+<hr class="mt-5">
+<div class="container-fluid">
+  <div class="mx-auto">
+    <h2 class="heading">Our Services</h2>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 card">
+        <h3 class="card-title">
+          <span>
+          <i class="fa fa-credit-card"></i>
+          </span>
+          <br>
+          Buy Shares
+        </h3>
+        <p class="card-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi placeat nihil provident illum autem at voluptas nesciunt eaque et obcaecati, error, ipsam repudiandae quae facilis reprehenderit id, nobis dicta vel.
+        </p>
+      </div>
+      <div class="col-lg-4 card">
+        <h3 class="card-title">
+          <span>
+          <i class="fa fa-dollar"></i>
+          </span>
+          <br>
+          Sell Shares
+        </h3>
+        <p class="card-description">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias soluta repellendus ipsa aut laboriosam? Soluta delectus temporibus earum assumenda aliquid! Possimus eaque nostrum distinctio illum mollitia autem suscipit odit molestiae.
+        </p>
+      </div>
+      <div class="col-lg-4 card">
+        <h3 class="card-title">
+          <span>
+          <i class="fa fa-compass"></i>
+          </span>
+          <br>
+          Discover
+        </h3>
+        <p class="card-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius illo eveniet itaque minus quia. Repellat explicabo nam in quae ipsam. Consequuntur porro officiis iure ratione repellat atque ipsum voluptatibus!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
