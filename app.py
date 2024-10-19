@@ -3,7 +3,7 @@ from flask import Flask,redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
-
+import os
 from helpers import apology, login_required, lookup, usd
 
 # Configure application
@@ -197,3 +197,7 @@ def sell():
             HAVING SUM(CASE WHEN type = 'BUY' THEN shares ELSE -shares END) > 0
         """, session["user_id"])
         return render_template("sell.html", symbols=symbols)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
